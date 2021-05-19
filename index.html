@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Booked</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  
+  <!-- header section starts -->
+
+  <header>
+
+    <a href="#" class="logo">LOGO</a>
+
+    <div id= "menu-bar" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+      <a href="#features">features</a>
+      <a href="#about">about</a>
+      <a href="#contact">contact</a>
+    </nav>
+   
+  </header>
+
+  <!-- header section ends -->
+
+  <!-- home section starts -->
+
+  <section class="home" id="home">
+    <div class="content">
+      <h3>BOOKED</h3>
+      <p>è una piattaforma per rendere più e sicuro il mondo delle discoteche.</p>
+      <a href="#" class="btn">scopri di più</a>
+    </div>
+
+    <div class="image-slider swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://images.pexels.com/photos/6347733/pexels-photo-6347733.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="phone-img1"></div>
+        <div class="swiper-slide"><img src="https://images.pexels.com/photos/3585092/pexels-photo-3585092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="phone-img2"></div>
+        <div class="swiper-slide"><img src="https://images.pexels.com/photos/4162583/pexels-photo-4162583.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="phone-img3"></div>
+        <div class="swiper-slide"><img src="https://images.pexels.com/photos/59884/pexels-photo-59884.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="party-img1"></div>
+        <div class="swiper-slide"><img src="https://images.pexels.com/photos/2311713/pexels-photo-2311713.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="party-img2"></div>
+      </div>
+      
+    </div>
+
+  </section>
+
+  <!-- home section ends -->
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+
+  var swiper = new Swiper(".image-slider", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 2,
+      slideShadows: true,
+    },
+    loop:true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    }
+  });
+
+    let menu = document.querySelector('#menu-bar');
+    let navbar = document.querySelector('.navbar');
+
+    menu.addEventListener('click', () => {
+      menu.classList.toggle('fa-times');
+      navbar.classList.toggle('nav-toggle')
+    });
+
+    window.onscroll = () =>{
+      menu.classList.remove('fa-times');
+      navbar.classList.remove('nav-toggle')
+    }
+
+  </script>
+
+</body>
+
+</html>
