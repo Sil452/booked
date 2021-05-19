@@ -48,6 +48,17 @@ section{
   transform: scale(1.1);
 }
 
+.heading{
+  text-align: center;
+  color: transparent;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 5rem;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
 header{
   position: fixed;
   top: 0;
@@ -125,6 +136,58 @@ header{
 }
 
 
+.box-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box{
+  margin: 1rem;
+  border-radius: .5rem;
+  text-align: center;
+  background: rgba(252, 99, 214, 0.05);
+  color: #141414c9;
+  padding: 1rem;
+  flex: 1 1 30rem;
+  cursor: pointer;
+}
+
+.box i{
+  color: var(--pink);
+  font-size: 5rem;
+  padding: 1rem;
+}
+
+.box h3{
+  font-size: 2.4rem;
+  padding: 1rem;
+}
+
+.box p{
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.box:hover{
+  background: var(--gradient);
+}
+
+.box:hover > *{
+  color:var(--white)
+}
+
+.phone-img{
+  width: 250px;
+}
+
+.row{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 
 
@@ -205,11 +268,24 @@ header{
     font-size: 1.5rem;
   }
 
+  .phone-img{
+    width: 40%;
+  }
+
 }
 
 @media (max-width:400px){
   html{
     font-size: 50%;
   }
+
+  .heading{
+    font-size: 4rem;
+  }
+
+  .phone-img{
+    width: 40%;
+  }
+
 }
 
