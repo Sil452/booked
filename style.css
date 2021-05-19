@@ -180,6 +180,7 @@ header{
 
 .phone-img{
   width: 250px;
+  margin-top: 20px;
 }
 
 .row{
@@ -187,6 +188,34 @@ header{
   text-align: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.image-container{
+  flex: 1 1 40rem;
+}
+
+.download-content h3{
+  font-size: 3.5rem;
+  text-align: left;
+}
+
+.download-content p{
+  font-size: 1.7rem;
+  padding: 1rem 0;
+  text-align: left;
+}
+
+.download-btn{
+  width: 150px;
+}
+
+.buttons{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.buttons a:hover{
+  opacity: 0.7;
 }
 
 
